@@ -1,16 +1,7 @@
 import React, {useState} from "react";
-import { 
-    TextInput,
-    View,
-    Text,
-    TouchableOpacity,
-    Vibration,
-    Pressable,
-    Keyboard,
-     } from "react-native";
+import { TextInput, View, Text, TouchableOpacity, Vibration, Pressable, Keyboard, FlatList } from "react-native";
 import ResultImc from "./ResultImc";
 import styles from "./style";
-import { FlatList } from "react-native-web";
 
 export default function Form() {
 
@@ -93,6 +84,7 @@ export default function Form() {
                 </View>
                 }
                 <FlatList
+                showsVerticalScrollIndicator={false}
                 style={styles.listImc}
                 data={imcList.reverse()}
                 renderItem={({item}) =>{
